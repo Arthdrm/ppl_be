@@ -9,4 +9,10 @@ module.exports = {
 
         }
     },
+    async createMahasiswa(data) {
+        const newMahasiswa = await prisma.mahasiswa.create({
+          data: data
+        });
+        return `Created new mahasiswa with ID: ${newMahasiswa.id}`;
+      }
 }

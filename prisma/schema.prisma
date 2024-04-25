@@ -14,4 +14,8 @@ model Mahasiswa {
   id      Int    @id @default(autoincrement())
   nim     String @db.VarChar(255)
   jurusan String @db.VarChar(255)
+  notelp String @db.VarChar(255)
+  email String @db.VarChar(255)
+  alamat String @db.VarChar(255)
 }
+

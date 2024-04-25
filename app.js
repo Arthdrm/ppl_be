@@ -5,7 +5,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 const DATABASE_URL = process.env.DATABASE_URL;
+var cors = require('cors')
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use('/',require('./src/routes/index'))
 

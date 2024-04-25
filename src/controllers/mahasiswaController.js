@@ -18,4 +18,20 @@ module.exports ={
             ));
         }
     },
+    async createMahasiswaData(req,res){
+        try {
+            console.log(req.body)
+            let userData = await service.mahasiswaService.createMahasiswa(req.body)
+
+            res.status(200).json(utils.responseTemplate.successResponse(
+                true,
+                userData,
+            ))
+        }catch (error) {
+            res.status(500).json(utils.responseTemplate.errorResponse(
+                false,
+                `${error.message}`,
+            ));
+        }
+    },
 }

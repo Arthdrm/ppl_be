@@ -13,6 +13,7 @@ const middleware = require("../middlewares")
 
 //mahasiswa-route
 router.get("/mahasiswa",controller.mahasiswaController.getMahasiswaData)
+router.post("/mahasiswa/create",controller.mahasiswaController.createMahasiswaData)
 
 
 
