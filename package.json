@@ -1,5 +1,5 @@
 {
-  "name": "back-end-service-brait",
+  "name": "backend-ppl",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -7,16 +7,8 @@
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BRAIT-Braille-Translator/back-end-service-brait.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BRAIT-Braille-Translator/back-end-service-brait/issues"
-  },
-  "homepage": "https://github.com/BRAIT-Braille-Translator/back-end-service-brait#readme",
   "dependencies": {
     "@google-cloud/storage": "^7.7.0",
     "@prisma/client": "^5.13.0",
