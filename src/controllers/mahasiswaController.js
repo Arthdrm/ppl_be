@@ -34,4 +34,22 @@ module.exports ={
             ));
         }
     },
+    async getKrsData(req,res){
+        try {
+
+            let krsData = await service.mahasiswaService.getMahasiswaKrs(req.body.id)
+
+            res.status(200).json(utils.responseTemplate.successResponse(
+                true,
+                `succes get krs data`,
+                krsData
+            ))
+        }catch (error) {
+            res.status(500).json(utils.responseTemplate.errorResponse(
+                false,
+                `${error.message}`,
+            ));
+        }
+    },
+
 }

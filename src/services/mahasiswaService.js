@@ -14,5 +14,18 @@ module.exports = {
           data: data
         });
         return `Created new mahasiswa with ID: ${newMahasiswa.id}`;
-      }
+      },
+
+    async getMahasiswaKrs(id){
+        try {
+            const krsData = await prisma.krs.findMany({
+                where: {
+                    mahasiswaId: id
+                }
+            });
+            return krsData
+        }catch (error) {
+
+        }
+    },
 }
