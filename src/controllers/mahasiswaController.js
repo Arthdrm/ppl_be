@@ -4,7 +4,7 @@ module.exports ={
     async getMahasiswaData(req,res){
         try {
 
-            let userData = await service.mahasiswaService.getMahasiswa()
+            let userData = await service.mahasiswaService.getMahasiswa(req)
 
             res.status(200).json(utils.responseTemplate.successResponse(
                 true,

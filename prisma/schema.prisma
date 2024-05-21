@@ -18,6 +18,8 @@ model Mahasiswa {
   email   String @db.VarChar(255)
   alamat  String @db.VarChar(255)
   Krs     Krs[]
+
+  @@map("mahasiswa")
 }
 
 model Krs {
@@ -29,6 +31,8 @@ model Krs {
   matakuliahId Int
   mahasiswa    Mahasiswa  @relation(fields: [mahasiswaId], references: [id])
   matakuliah   MataKuliah @relation(fields: [matakuliahId], references: [id])
+
+  @@map("krs")
 }
 
 model MataKuliah {
@@ -39,4 +43,6 @@ model MataKuliah {
   sks         Int    @db.Int
   jenis_mk    String @db.VarChar(255)
   Krs         Krs[]
+
+  @@map("matakuliah")
 }
